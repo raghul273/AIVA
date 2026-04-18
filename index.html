@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="https://lucide.dev/logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AccessiWeb - Accessibility Extension Simulator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            colors: {
+              // Custom colors to match the refined palette exactly
+              theme: {
+                bg: 'var(--theme-bg)',
+                surface: 'var(--theme-surface)',
+                text: 'var(--theme-text)',
+                border: 'var(--theme-border)',
+                accent: 'var(--theme-accent)',
+              }
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+      /* Scientific font designed specifically to reduce visual stress and improve reading speed */
+      @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap');
+      
+      :root {
+        /* Modern Light Mode: Soft Slate & Blue-Gray */
+        --theme-bg: #f8fafc;
+        --theme-surface: #ffffff;
+        --theme-text: #334155;
+        --theme-border: #e2e8f0;
+        --theme-accent: #6366f1;
+        --theme-accent-soft: #eef2ff;
+      }
+
+      .dark {
+        /* Modern Dark Mode: Rich Deep Slate */
+        --theme-bg: #0f172a;
+        --theme-surface: #1e293b;
+        --theme-text: #e2e8f0;
+        --theme-border: #334155;
+        --theme-accent: #818cf8;
+        --theme-accent-soft: #312e81;
+      }
+
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: var(--theme-bg);
+        color: var(--theme-text);
+        /* Global premium transitions */
+        transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+      }
+
+      /* Apply transition to major structural elements */
+      #root, main, section, header, nav, div[role="dialog"] {
+        transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      /* Custom Scrollbar for a polished look */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: var(--theme-border);
+        border-radius: 10px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: var(--theme-accent);
+      }
+
+      * {
+        scrollbar-width: thin;
+        scrollbar-color: var(--theme-border) transparent;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.31.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

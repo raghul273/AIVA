@@ -1,0 +1,7 @@
+{
+  "name": "AccessiWeb Simulator",
+  "description": "A browser extension simulator for neurodivergent and visually-impaired accessibility. Demonstrates real-time DOM modification for Dyslexia, ADHD, and Low Vision.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
